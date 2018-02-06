@@ -1,0 +1,8 @@
+1,India vromoner dinlipi,Shah Mustofa Khaled
+2,Pakistan vromoner dinlipi,Shah Mustofa Khaled
+3,Nepal vromoner dinlipi,Shah Mustofa Khaled
+4,Thailand vromoner dinlipi,Shah Mustofa Khaled
+5,Australia vromoner dinlipi,Shah Mustofa Khaled
+6,Canada vromoner dinlipi,Shah Mustofa Khaled
+7,Usa vromoner dinlipi,Shah Mustofa Khaled
+8,South Africa vromoner dinlipi,Shah Mustofa Khaled
