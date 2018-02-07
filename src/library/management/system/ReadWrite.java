@@ -14,6 +14,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
+import java.util.Scanner;
 
 /**
  *
@@ -42,9 +43,9 @@ public class ReadWrite {
             }
         }
     }
-    public void PrintWholeTextFile (String FileName) {
+    public void PrintWholeTextFile (String fileName) {
     try {
-			File file = new File(String.format("%s.txt", FileName));
+			File file = new File(String.format("%s.txt", fileName));
 			FileReader fileReader = new FileReader(file);
 			BufferedReader bufferedReader = new BufferedReader(fileReader);
 			StringBuffer stringBuffer = new StringBuffer();
@@ -59,10 +60,35 @@ public class ReadWrite {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+ 
+    }
+    public String SearchForBookByID(String searchterm,String fileName){
+    boolean found=false;
+    String ID=""; String Title = ""; String Author = "";
+    
+    try {
+        Scanner x =new Scanner(new File(String.format("%s.txt", fileName)));
+        x.useDelimiter("[,\n]");
+    
+        while (x.hasNext() && !found){
+            ID= x.next();
+            Title= x.next();
+            Author= x.next();
+            
+            if (ID.equals(searchterm)) 
+            {
+            found = true;
+            }
+        }      
+    }
+    catch (Exception error) {
+    System.err.println(error);
+    }
+        return String.format("%s,%s,%s",ID,Title,Author); 
+    
     }
     
+}
     
     
     
-    }
-
